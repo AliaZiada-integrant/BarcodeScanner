@@ -47,8 +47,6 @@ struct ScannerView: View {
     }
     
     
-    
-    
     func generateBarcode(from result: ScanResult) {
         barcodeText = result.string
         if let formate = result.type.zxBarcodeFormat(), !barcodeText.isEmpty{
