@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		839C9EF527D53E6600E81B15 /* scanner.gif in Resources */ = {isa = PBXBuildFile; fileRef = 839C9EF427D53E6600E81B15 /* scanner.gif */; };
 		83CA58EC27D52BDE00BC18AA /* AVMetadataObject.ObjectType+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CA58EB27D52BDE00BC18AA /* AVMetadataObject.ObjectType+Extension.swift */; };
 		83CEB64427D4FC1600453ABC /* BarcodeScannerGeneratorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CEB64327D4FC1600453ABC /* BarcodeScannerGeneratorApp.swift */; };
 		83CEB64627D4FC1600453ABC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CEB64527D4FC1600453ABC /* ContentView.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		56175D149866688CB427F3F0 /* Pods_BarcodeScannerGenerator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BarcodeScannerGenerator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		839C9EF427D53E6600E81B15 /* scanner.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = scanner.gif; path = ../../../scanner.gif; sourceTree = "<group>"; };
 		83CA58EB27D52BDE00BC18AA /* AVMetadataObject.ObjectType+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVMetadataObject.ObjectType+Extension.swift"; sourceTree = "<group>"; };
 		83CEB64027D4FC1600453ABC /* BarcodeScannerGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarcodeScannerGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83CEB64327D4FC1600453ABC /* BarcodeScannerGeneratorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScannerGeneratorApp.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				83CEB65927D4FC4D00453ABC /* ScannerView.swift */,
 				83CEB66427D5261800453ABC /* BarcodeScannerGenerator-Bridging-Header.h */,
 				83CA58EB27D52BDE00BC18AA /* AVMetadataObject.ObjectType+Extension.swift */,
+				839C9EF427D53E6600E81B15 /* scanner.gif */,
 			);
 			path = BarcodeScannerGenerator;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83CEB64B27D4FC1800453ABC /* Preview Assets.xcassets in Resources */,
+				839C9EF527D53E6600E81B15 /* scanner.gif in Resources */,
 				83CEB64827D4FC1800453ABC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
