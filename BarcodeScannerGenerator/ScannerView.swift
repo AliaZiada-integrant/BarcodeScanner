@@ -7,16 +7,19 @@
 
 import SwiftUI
 import CodeScanner
+import CoreImage.CIFilterBuiltins
+import ZXingObjC
 
 
 struct ScannerView: View {
     @Binding var showScanner: Bool
-    @Binding var scanText: String
+    @Binding var barcodeText: String
+    @Binding var barcodeImage: UIImage?
     
     var body: some View {
         
         VStack{
-            CodeScannerView(codeTypes: [.qr, .code128], showViewfinder: true, simulatedData: "", completion: handleScan)
+            CodeScannerView(codeTypes: [.qr, .code128,.ean8, .ean13,.aztec,.code39,.code93,.pdf417,.upce,.dataMatrix], showViewfinder: true, simulatedData: "", completion: handleScan)
                 .frame(height: 300)
                 .padding(.top, 30)
                 .foregroundColor(Color.green)
@@ -36,10 +39,27 @@ struct ScannerView: View {
     func handleScan(result: Result<ScanResult, ScanError>) {
         switch result{
         case .success(let data):
+            generateBarcode(from: data)
             showScanner = false
-            scanText = data.string
         case .failure(let error):
             print("Scanning failed: \(error.localizedDescription)")
+        }
+    }
+    
+    
+    
+    
+    func generateBarcode(from result: ScanResult) {
+        barcodeText = result.string
+        if let formate = result.type.zxBarcodeFormat(), !barcodeText.isEmpty{
+            let writer = ZXMultiFormatWriter()
+            if let result = try? writer.encode(barcodeText, format: formate, width: 1000, height: 300){
+                if let imageRef = ZXImage(matrix: result){
+                    if let cgImg = imageRef.cgimage{
+                        barcodeImage = UIImage(cgImage: cgImg)
+                    }
+                }
+            }
         }
     }
 }

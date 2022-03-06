@@ -6,14 +6,15 @@
 //
 
 import SwiftUI
-import CoreImage.CIFilterBuiltins
 
 struct ContentView: View {
     @State var showScanner = false
-    @State var scanText = ""
+    @State var barcodeText: String = ""
+    @State var barcodeImage: UIImage? = nil
+    
     var body: some View{
         VStack{
-            Text(scanText)
+            Text(barcodeText)
                 .font(.title)
                 .padding(.top)
             
@@ -27,31 +28,17 @@ struct ContentView: View {
             .fullScreenCover(isPresented: $showScanner) {
                 
             } content: {
-                ScannerView(showScanner: $showScanner, scanText: $scanText)
+                ScannerView(showScanner: $showScanner, barcodeText: $barcodeText,barcodeImage: $barcodeImage)
             }
             
             Spacer()
-            if let image = generateBarcode(from: scanText){
+            if let image = barcodeImage{
                 Image(uiImage: image)
                     .resizable()
-                    .frame(height: 200)
+                    .aspectRatio(contentMode: .fit)
+                    .frame(height: 300)
             }
         }
-    }
-    
-    
-    func generateBarcode(from string: String) -> UIImage? {
-        let filter  = CIFilter.code128BarcodeGenerator()
-        let context = CIContext()
-        let data = Data(string.utf8)
-        filter.setValue(data, forKey: "inputMessage")
-        let transform = CGAffineTransform(scaleX: 3, y: 3)
-        if let img = filter.outputImage?.transformed(by: transform){
-            if let cgImg = context.createCGImage(img, from: img.extent){
-                return UIImage(cgImage: cgImg)
-            }
-        }
-        return nil
     }
 }
 struct ContentView_Previews: PreviewProvider {
