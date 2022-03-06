@@ -2,7 +2,7 @@
 
 This is a sample app that scan barcode and generate a digital copy of it
 
-![](scanner.gif)
+![](sample_app.gif)
 
 Library used for scanning barcode:
 
