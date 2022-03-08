@@ -13,3 +13,8 @@ Library used for barcode generation:
 https://github.com/TheLevelUp/ZXingObjC
 
 
+### Installation
+
+> pod install
+
+
