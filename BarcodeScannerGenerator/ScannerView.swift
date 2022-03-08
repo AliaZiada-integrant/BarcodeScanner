@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import CodeScanner
 import CoreImage.CIFilterBuiltins
 import ZXingObjC
 
@@ -25,6 +24,7 @@ struct ScannerView: View {
                 .foregroundColor(Color.green)
             
             Spacer()
+            
             Button("Cancel") {
                 showScanner = false
             }

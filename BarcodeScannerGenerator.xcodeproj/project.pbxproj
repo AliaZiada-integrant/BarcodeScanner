@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		83C56F1927D7D2FD00E4C859 /* CodeScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C56F1827D7D2FD00E4C859 /* CodeScannerView.swift */; };
+		83C56F1B27D7D31E00E4C859 /* ScannerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C56F1A27D7D31E00E4C859 /* ScannerCoordinator.swift */; };
+		83C56F1D27D7D33700E4C859 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C56F1C27D7D33700E4C859 /* ScannerViewController.swift */; };
 		83CA58EC27D52BDE00BC18AA /* AVMetadataObject.ObjectType+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CA58EB27D52BDE00BC18AA /* AVMetadataObject.ObjectType+Extension.swift */; };
 		83CEB64427D4FC1600453ABC /* BarcodeScannerGeneratorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CEB64327D4FC1600453ABC /* BarcodeScannerGeneratorApp.swift */; };
 		83CEB64627D4FC1600453ABC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CEB64527D4FC1600453ABC /* ContentView.swift */; };
@@ -14,13 +17,15 @@
 		83CEB64B27D4FC1800453ABC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83CEB64A27D4FC1800453ABC /* Preview Assets.xcassets */; };
 		83CEB64D27D4FC1800453ABC /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CEB64C27D4FC1800453ABC /* Persistence.swift */; };
 		83CEB65027D4FC1800453ABC /* BarcodeScannerGenerator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 83CEB64E27D4FC1800453ABC /* BarcodeScannerGenerator.xcdatamodeld */; };
-		83CEB65827D4FC3300453ABC /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 83CEB65727D4FC3300453ABC /* CodeScanner */; };
 		83CEB65A27D4FC4D00453ABC /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CEB65927D4FC4D00453ABC /* ScannerView.swift */; };
 		E75CF94E7DDAC04225FF32F6 /* Pods_BarcodeScannerGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56175D149866688CB427F3F0 /* Pods_BarcodeScannerGenerator.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		56175D149866688CB427F3F0 /* Pods_BarcodeScannerGenerator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BarcodeScannerGenerator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		83C56F1827D7D2FD00E4C859 /* CodeScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeScannerView.swift; sourceTree = "<group>"; };
+		83C56F1A27D7D31E00E4C859 /* ScannerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerCoordinator.swift; sourceTree = "<group>"; };
+		83C56F1C27D7D33700E4C859 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		83CA58EB27D52BDE00BC18AA /* AVMetadataObject.ObjectType+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVMetadataObject.ObjectType+Extension.swift"; sourceTree = "<group>"; };
 		83CEB64027D4FC1600453ABC /* BarcodeScannerGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarcodeScannerGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83CEB64327D4FC1600453ABC /* BarcodeScannerGeneratorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScannerGeneratorApp.swift; sourceTree = "<group>"; };
@@ -40,7 +45,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83CEB65827D4FC3300453ABC /* CodeScanner in Frameworks */,
 				E75CF94E7DDAC04225FF32F6 /* Pods_BarcodeScannerGenerator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -48,6 +52,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		83C56F1E27D7D39A00E4C859 /* CodeScanner */ = {
+			isa = PBXGroup;
+			children = (
+				83C56F1827D7D2FD00E4C859 /* CodeScannerView.swift */,
+				83C56F1A27D7D31E00E4C859 /* ScannerCoordinator.swift */,
+				83C56F1C27D7D33700E4C859 /* ScannerViewController.swift */,
+			);
+			path = CodeScanner;
+			sourceTree = "<group>";
+		};
 		83CEB63727D4FC1600453ABC = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +92,7 @@
 				83CEB65927D4FC4D00453ABC /* ScannerView.swift */,
 				83CEB66427D5261800453ABC /* BarcodeScannerGenerator-Bridging-Header.h */,
 				83CA58EB27D52BDE00BC18AA /* AVMetadataObject.ObjectType+Extension.swift */,
+				83C56F1E27D7D39A00E4C859 /* CodeScanner */,
 			);
 			path = BarcodeScannerGenerator;
 			sourceTree = "<group>";
@@ -126,7 +141,6 @@
 			);
 			name = BarcodeScannerGenerator;
 			packageProductDependencies = (
-				83CEB65727D4FC3300453ABC /* CodeScanner */,
 			);
 			productName = BarcodeScannerGenerator;
 			productReference = 83CEB64027D4FC1600453ABC /* BarcodeScannerGenerator.app */;
@@ -158,7 +172,6 @@
 			);
 			mainGroup = 83CEB63727D4FC1600453ABC;
 			packageReferences = (
-				83CEB65627D4FC3300453ABC /* XCRemoteSwiftPackageReference "CodeScanner" */,
 			);
 			productRefGroup = 83CEB64127D4FC1600453ABC /* Products */;
 			projectDirPath = "";
@@ -228,8 +241,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83C56F1927D7D2FD00E4C859 /* CodeScannerView.swift in Sources */,
+				83C56F1B27D7D31E00E4C859 /* ScannerCoordinator.swift in Sources */,
 				83CA58EC27D52BDE00BC18AA /* AVMetadataObject.ObjectType+Extension.swift in Sources */,
 				83CEB64D27D4FC1800453ABC /* Persistence.swift in Sources */,
+				83C56F1D27D7D33700E4C859 /* ScannerViewController.swift in Sources */,
 				83CEB65027D4FC1800453ABC /* BarcodeScannerGenerator.xcdatamodeld in Sources */,
 				83CEB64627D4FC1600453ABC /* ContentView.swift in Sources */,
 				83CEB64427D4FC1600453ABC /* BarcodeScannerGeneratorApp.swift in Sources */,
@@ -449,25 +465,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		83CEB65627D4FC3300453ABC /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/twostraws/CodeScanner";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		83CEB65727D4FC3300453ABC /* CodeScanner */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 83CEB65627D4FC3300453ABC /* XCRemoteSwiftPackageReference "CodeScanner" */;
-			productName = CodeScanner;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		83CEB64E27D4FC1800453ABC /* BarcodeScannerGenerator.xcdatamodeld */ = {
