@@ -19,7 +19,7 @@ struct ScannerView: View {
     var body: some View {
         
         VStack{
-            CodeScannerView(codeTypes: [.qr, .code128,.ean8, .ean13,.aztec,.code39,.code93,.pdf417,.upce,.dataMatrix], showViewfinder: true, simulatedData: "", completion: handleScan)
+            CodeScannerView(codeTypes: [.qr, .code128,.ean8, .ean13,.aztec,.code39,.code93,.pdf417,.upce,.dataMatrix, .interleaved2of5], showViewfinder: true, simulatedData: "", completion: handleScan)
                 .frame(height: 300)
                 .padding(.top, 30)
                 .foregroundColor(Color.green)

@@ -32,6 +32,8 @@ extension AVMetadataObject.ObjectType{
             return kBarcodeFormatUPCE
         case .dataMatrix:
             return kBarcodeFormatDataMatrix
+        case .interleaved2of5:
+            return kBarcodeFormatITF
         default:
             return nil
         }
